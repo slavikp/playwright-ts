@@ -10,9 +10,10 @@ export default class LoginPage extends BasePage {
     private passwordField: Locator;
     private loginButton: Locator;
     private errorMessage: Locator;
-    private default_username = process.env.STANDARD_USER as string;
-    private default_password = process.env.CORRECT_PASSWORD as string;
-
+    //private default_username = process.env.STANDARD_USER as string;
+    //private default_password = process.env.CORRECT_PASSWORD as string;
+    private default_username = "standard_user"
+    private default_password = "secret_sauce"
     
     constructor(protected page: Page) {
         super(page);
