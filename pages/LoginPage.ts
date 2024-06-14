@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import ApplicationURL from '../helpers/ApplicationURL';
+import ApplicationURL from "../helpers/ApplicationURL";
 import { ErrorMessages } from "../helpers/ErrorMessages";
 import { BasePage } from "./BasePage";
 
@@ -24,8 +24,8 @@ export default class LoginPage extends BasePage {
 
 
     public async loginToApplication(username = this.default_username, 
-                                    password = this.default_password, 
-                                    url = ApplicationURL.BASE_URL) {
+        password = this.default_password, 
+        url = ApplicationURL.BASE_URL) {
         await this.page.goto(url);
         await this.validatePageUrl(ApplicationURL.BASE_URL);
         await this.usernameField.fill(username);
